@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>西安理工大学区块链浏览器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script src="lib/echarts.min.js"></script>
+    <script src="lib/china.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(218, 210, 202, 0.075);
+        }
+
+        #main {
+            /* width: 500px; */
+            height: 360px;
+            /* margin: 150px auto; */
+            border: 1px solid rgb(224, 208, 208);
+        }
+
+        /*默认长宽比0.75*/
+    </style>
+</head>
+
+<body>
+
+    <div style="">
+        <div style="height: 30px;background-color: rgb(120, 131, 182);">
+        </div>
+        <H1 style="margin-bottom: 30px;text-align:center; margin-left:auto; margin-right:auto;color: rgb(98, 180, 218);">西安理工大学区块链浏览器</H1>
+        <div style="overflow: hidden;width: 80%; margin:0 auto;margin-bottom: 10px;">
+            <div id="left_list" style="float: left;width: 19%;">
+                <div class="media" style="height: 60px;">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="icon/1.png" alt="..." style="height: 50px;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading" style="font-size: 30px;">309,832</h4>
+                        区块高度
+                    </div>
+                </div>
+                <div class="media" style="height: 60px;">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="icon/2.png" alt="..." style="height: 50px;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading" style="font-size: 30px;">22,934</h4>
+                        上链数据量
+                    </div>
+                </div>
+
+                <div class="media" style="height: 60px;">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="icon/3.png" alt="..." style="height: 50px;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading" style="font-size: 30px;">4</h4>
+                        活跃节点数
+                    </div>
+                </div>
+
+                <div class="media" style="height: 60px;">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="icon/4.png" alt="..." style="height: 50px;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading" style="font-size: 30px;">保留字段</h4>
+                        保留字段
+                    </div>
+                </div>
+
+                <div class="media" style="height: 60px;">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="icon/3.png" alt="..." style="height: 50px;">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading" style="font-size: 30px;">保留字段</h4>
+                        保留字段
+                    </div>
+                </div>
+            </div>
+
+            <div id="main" style="float: left;width: 50%;margin-left: 1%;">
+            </div>
+
+            <div style="float: left;width: 29%;margin-left: 1%;">
+                <ul class="list-group">
+                    <li class="list-group-item" style="font-weight: 800;">水泥检测报告
+                        <span class="badge">20</span>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item" style="font-weight: 800;">水泥实验取样单
+                        <span class="badge">30</span>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item" style="font-weight: 800;">水泥胶砂强度实验单
+                        <span class="badge">50</span>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item" style="font-weight: 800;">水泥胶砂取样原始记录
+                        <span class="badge">60</span>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item" style="font-weight: 800;">水泥标准稠度用水量原始记录
+                        <span class="badge">80</span>
+                    </li>
+                </ul>
+                <ul class="list-group">
+                    <li class="list-group-item" style="font-weight: 800;">水泥比表面积原始记录
+                        <span class="badge">100</span>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+        <div style="overflow: hidden;width: 80%; margin:0 auto;">
+
+            <div id="main_zhexian" style="width: 60%;height:400px;border: 1px solid #ddd;float: left;"></div>
+            <div id="main_bingtu" style="width: 39%;height:400px;border: 1px solid #ddd;float: left;margin-left: 1%;"></div>
+
+        </div>
+
+        <div style="height: 20px;margin:20px auto; text-align: center;">Copyright 2021 西安理工大学 ALL Rights Reserved</div>
+        <div style="height: 20px;"></div>
+    </div>
+    <script type="text/javascript">
+        var myChart_zhexian = echarts.init(document.getElementById('main_zhexian'));
+        option_zhexian = {
+            title: {
+                text: '西理工上链区块量统计',
+                subtext: '西安理工大学'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['新增区块量', '区块总数']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    dataView: {
+                        show: true,
+                        readOnly: false
+                    },
+                    magicType: {
+                        show: true,
+                        type: ['line', 'bar']
+                    },
+                    restore: {
+                        show: true
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+            calculable: true,
+            xAxis: [{
+                type: 'category',
+                data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                    name: '新增区块量',
+                    type: 'bar',
+                    data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+                    markPoint: {
+                        data: [{
+                                type: 'max',
+                                name: '最大值'
+                            },
+                            {
+                                type: 'min',
+                                name: '最小值'
+                            }
+                        ]
+                    },
+                    markLine: {
+                        data: [{
+                            type: 'average',
+                            name: '平均值'
+                        }]
+                    }
+                },
+                {
+                    name: '区块总数',
+                    type: 'bar',
+                    data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+                    markPoint: {
+                        data: [{
+                                name: '年最高',
+                                value: 182.2,
+                                xAxis: 7,
+                                yAxis: 183
+                            },
+                            {
+                                name: '年最低',
+                                value: 2.3,
+                                xAxis: 11,
+                                yAxis: 3
+                            }
+                        ]
+                    },
+                    markLine: {
+                        data: [{
+                            type: 'average',
+                            name: '平均值'
+                        }]
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart_zhexian.setOption(option_zhexian);
+
+        // ######
+
+        var myChart_bingtu = echarts.init(document.getElementById('main_bingtu'));
+        option_bingtu = {
+            title: {
+                text: '西理工上链数据量分类',
+                subtext: '西安理工大学',
+                left: 'center'
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+            },
+            series: [{
+                name: '西安理工大学',
+                type: 'pie',
+                radius: '50%',
+                data: [{
+                        value: 1048,
+                        name: '胶砂取样'
+                    },
+                    {
+                        value: 735,
+                        name: '标准稠度用水量'
+                    },
+                    {
+                        value: 580,
+                        name: '水泥比表面积'
+                    },
+                    {
+                        value: 484,
+                        name: '胶砂强度'
+                    },
+                    {
+                        value: 300,
+                        name: '水泥实验'
+                    }
+                ],
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
+        myChart_bingtu.setOption(option_bingtu);
+
+
+
+        // #########
+        var dataList = [{
+                name: "南海诸岛",
+                value: 0
+            },
+            {
+                name: '北京',
+                value: randomValue()
+            },
+            {
+                name: '天津',
+                value: randomValue()
+            },
+            {
+                name: '上海',
+                value: randomValue()
+            },
+            {
+                name: '重庆',
+                value: randomValue()
+            },
+            {
+                name: '河北',
+                value: randomValue()
+            },
+            {
+                name: '河南',
+                value: randomValue()
+            },
+            {
+                name: '云南',
+                value: randomValue()
+            },
+            {
+                name: '辽宁',
+                value: randomValue()
+            },
+            {
+                name: '黑龙江',
+                value: randomValue()
+            },
+            {
+                name: '湖南',
+                value: randomValue()
+            },
+            {
+                name: '安徽',
+                value: randomValue()
+            },
+            {
+                name: '山东',
+                value: randomValue()
+            },
+            {
+                name: '新疆',
+                value: randomValue()
+            },
+            {
+                name: '江苏',
+                value: randomValue()
+            },
+            {
+                name: '浙江',
+                value: randomValue()
+            },
+            {
+                name: '江西',
+                value: randomValue()
+            },
+            {
+                name: '湖北',
+                value: randomValue()
+            },
+            {
+                name: '广西',
+                value: randomValue()
+            },
+            {
+                name: '甘肃',
+                value: randomValue()
+            },
+            {
+                name: '山西',
+                value: randomValue()
+            },
+            {
+                name: '内蒙古',
+                value: randomValue()
+            },
+            {
+                name: '陕西',
+                value: randomValue()
+            },
+            {
+                name: '吉林',
+                value: randomValue()
+            },
+            {
+                name: '福建',
+                value: randomValue()
+            },
+            {
+                name: '贵州',
+                value: randomValue()
+            },
+            {
+                name: '广东',
+                value: randomValue()
+            },
+            {
+                name: '青海',
+                value: randomValue()
+            },
+            {
+                name: '西藏',
+                value: randomValue()
+            },
+            {
+                name: '四川',
+                value: randomValue()
+            },
+            {
+                name: '宁夏',
+                value: randomValue()
+            },
+            {
+                name: '海南',
+                value: randomValue()
+            },
+            {
+                name: '台湾',
+                value: randomValue()
+            },
+            {
+                name: '香港',
+                value: randomValue()
+            },
+            {
+                name: '澳门',
+                value: randomValue()
+            }
+        ]
+        var myChart = echarts.init(document.getElementById('main'));
+
+        function randomValue() {
+            return Math.round(Math.random() * 1000);
+        }
+        option = {
+            tooltip: {
+                formatter: function (params, ticket, callback) {
+                    return params.seriesName + '<br />' + params.name + '：' + params.value
+                } //数据格式化
+            },
+            visualMap: {
+                min: 0,
+                max: 1500,
+                left: 'left',
+                top: 'bottom',
+                text: ['高', '低'], //取值范围的文字
+                inRange: {
+                    color: ['#e0ffff', '#006edd'] //取值范围的颜色
+                },
+                show: true //图注
+            },
+            geo: {
+                map: 'china',
+                roam: false, //不开启缩放和平移
+                zoom: 1.23, //视角缩放比例
+                label: {
+                    normal: {
+                        show: true,
+                        fontSize: '10',
+                        color: 'rgba(0,0,0,0.7)'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        borderColor: 'rgba(0, 0, 0, 0.2)'
+                    },
+                    emphasis: {
+                        areaColor: '#F3B329', //鼠标选择区域颜色
+                        shadowOffsetX: 0,
+                        shadowOffsetY: 0,
+                        shadowBlur: 20,
+                        borderWidth: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            },
+            series: [{
+                name: '上链数据量',
+                type: 'map',
+                geoIndex: 0,
+                data: dataList
+            }]
+        };
+        myChart.setOption(option);
+        myChart.on('click', function (params) {
+            alert(params.name);
+        });
+    </script>
+</body>
+
+</html>
