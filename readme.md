@@ -6,4 +6,6 @@
 
 ## 一、展示效果
 
+### **[Click here](https://x-long.github.io/xaut-blockchain-explorer/) to preview the page.**
+
 <img src="result/result.png">
